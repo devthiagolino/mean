@@ -13,6 +13,22 @@ app.controller('CtrlUsuarios', function($scope){
 		}
 	];
 
-	$scope.total = 0;
+	$scope.total = $scope.list.length;
+
+
+	$scope.adicionar = function(){
+		$scope.list.push({
+			nome: $scope.vnome,
+			email: $scope.vemail,
+			telefone: $scope.vtelefone
+		});
+
+		$scope.vnome = "";
+		$scope.vemail = "";
+		$scope.vtelefone = "";
+		
+		$scope.total++;
+		
+	}
 
 });
