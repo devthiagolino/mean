@@ -31,4 +31,10 @@ app.controller('CtrlUsuarios', function($scope){
 		
 	}
 
+
+	$scope.remover = function(index){
+		$scope.list.splice(index,1);
+		$scope.total--;
+	}
+
 });
